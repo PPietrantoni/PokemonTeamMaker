@@ -1,0 +1,16 @@
+Hola!!
+Bienvenido a Pokemon Team Maker
+A continuacion se explica como se usa el programa
+
+opcion 1: Crea un equipo nuevo de 6 Pokemon, selecciona uno y el programa te dara
+opciones para seguir seleccionando el Pokemon mas optimo para tu futuro equipo.
+El programa te va a preguntar si deseas guardar el equipo para acceder a el mas tarde.
+
+opcion 2: Accede a equipos previamente creados, solo ingresa el nombre del equipo creado 
+anteriormente.
+
+opcion 3: Selecciona un Pokemon especifico y el programa te mostrara datos curiosos sobre el
+tal y como una POKEDEX
+
+
+

@@ -42,9 +42,10 @@ int main () {
     do{
         printf("ELIJA UNA OPCION: \n");
         printf("       1.- Armar Equipos\n");
-        printf("       2.- Pokedex\n");
-        printf("       3.- Ayuda\n");
-        printf("       4.- Salir\n");
+        printf("       2.- Mis Equipos\n");
+        printf("       3.- Pokedex\n");
+        printf("       4.- Ayuda\n");
+        printf("       5.- Salir\n");
         printf("Indique la opcion: ");
         scanf("%d", &op);
         fflush( stdin );
@@ -89,10 +90,70 @@ int main () {
                  printf("\n");
                   printf("\n");
                 }
-            }
+        }
         printf("\n");
 
-    }while(op!=4);
+
+        if(op==2){
+
+        }
+
+        printf("\n");
+
+
+        if(op==3){                 //Imprime datos de un pokemon especificado por el usuario
+            char nombre[20];
+            char pokedex[50];
+            char dex[] = "Pokedex/";
+            printf("Introduzca el nombre del Pokemon que desea \n");
+            scanf("%s", &nombre);
+            FILE * archivo;
+            strcpy(pokedex,dex);
+            strcat(pokedex,nombre);
+            strcat(pokedex,".txt");             //Agrega la carpeta y el formato .txt al nombre del pokemon
+
+
+
+            archivo=fopen(pokedex,"r");
+            if( archivo==NULL )
+                printf("Error al abrir el fichero\n");
+
+            else
+            {
+                printf("\n");
+
+                while( !feof(archivo) )
+                    printf("%c",getc(archivo));    //Imprime
+            }
+
+            fclose(archivo);
+
+        }
+
+        printf("\n");
+
+
+        if(op==4){                   //Abre el archivo Ayuda y lo imprime
+            FILE*archivo;
+            archivo=fopen("Ayuda.txt","r");
+            if( archivo==NULL )
+                printf("Error al abrir el fichero\n");
+
+            else
+            {
+                printf("\n");
+
+                while( !feof(archivo) )
+                    printf("%c",getc(archivo));
+            }
+
+            fclose(archivo);
+            }
+
+        printf("\n");
+
+
+    }while(op!=5);
 
     return 0;
 }
